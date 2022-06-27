@@ -2,7 +2,6 @@ const secondsNeedle = document.querySelector('.second');
 const minutesNeedle = document.querySelector('.minute');
 const hoursNeedle = document.querySelector('.hour');
 
-
 const dateAndTime = function(){
 
     const presentTime = new Date();
@@ -22,11 +21,12 @@ const dateAndTime = function(){
 
 }
 
-let tick = new Audio('assets\\ticTac.mp3');
+const tick = new Audio('assets\\ticTac.mp3');
 
 const play = function(){
     tick.play();
 };
+
 
 setInterval(play, 1000);
 setInterval(dateAndTime, 1000);
