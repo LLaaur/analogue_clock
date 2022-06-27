@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#282828;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analogueClock{
+    width: 35rem;
+    height: 35rem;
+    border: 9px solid #222222;
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.342),
+                  inset 4px 4px 10px rgba(0,0,0,0.5),
+                  inset -4px -4px 10px rgba(59, 59, 59, 0),
+                  4px 4px 10px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+.clockBack{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #282828;
+    overflow: hidden;
+}
+
+.clockBack::after{
+    transform: rotate(90deg);
+}
+
+.clockBack::before,
+.clockBack::after,
+.clockBack .lines{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #1df52f;
+    z-index: 0;
+    left: 50%;
+}
+
+.clockBack .lines{
+    background-color: #bdbdcb;
+    width: 3px;
+}
+
+.clockBack .lines.lineOne{
+    transform: rotate(30deg);
+}
+
+.clockBack .lines.lineTwo{
+    transform: rotate(60deg);
+}
+
+.clockBack .lines.lineThree{
+    transform: rotate(120deg);
+}
+
+.clockBack .lines.lineFour{
+    transform: rotate(150deg);
+}
+
+.clockFront{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #282828;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.clockFront::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-radius: 18px;
+    margin-left: -7px;
+    margin-top: -9px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #8f7676;
+    z-index: 5;
+}
+
+.needels{
+    width: 50%;
+    right: 50%;
+    height: 7px;
+    background-color: #ce007f;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.needels.second{
+    background-color: #6fee1a;
+    width: 45%;
+    height: 2px;
+}
+
+.needels.minute{
+    height: 3px;
+    z-index: 3;
+    width: 40%;
+}
+
+.needels.hour{
+    width: 30%;
+    z-index: 3;
+}
