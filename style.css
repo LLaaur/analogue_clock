@@ -95,7 +95,7 @@ section{
     z-index: 5;
 }
 
-.needels{
+.needles{
     width: 50%;
     right: 50%;
     height: 7px;
@@ -108,19 +108,19 @@ section{
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
-.needels.second{
+.needles.second{
     background-color: #6fee1a;
     width: 45%;
     height: 2px;
 }
 
-.needels.minute{
+.needles.minute{
     height: 3px;
     z-index: 3;
     width: 40%;
 }
 
-.needels.hour{
+.needles.hour{
     width: 30%;
     z-index: 3;
 }
