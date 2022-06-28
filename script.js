@@ -27,6 +27,28 @@ const play = function(){
     tick.play();
 };
 
+const clrPicker = document.getElementById('colorpicker');
+const bgClrPicker = document.getElementById('bgpicker');
+const frameClr = document.getElementById('framepicker');
+
+if (clrPicker){
+    clrPicker.addEventListener('input', () => {
+        $('.lines').css('background', clrPicker.value);
+    });
+};
+
+if(bgClrPicker){
+    bgClrPicker.addEventListener('input', () => {
+        $('.clockBack, .clockFront').css('background', bgClrPicker.value)
+    });
+};
+
+if (frameClr){
+    frameClr.addEventListener('input', () => {
+        $('.analogueClock').css('border-color', frameClr.value);
+    });
+};
+
 
 setInterval(play, 1000);
 setInterval(dateAndTime, 1000);
