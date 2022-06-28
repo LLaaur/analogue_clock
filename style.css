@@ -38,38 +38,35 @@ section{
     transform: rotate(90deg);
 }
 
-.clockBack::before,
-.clockBack::after,
-.clockBack .lines{
-    content: '';
+
+.clockBack .number{
+    --rotation : 0;
     position: absolute;
-    width: 3px;
+    width: 100%;
     height: 100%;
-    background-color: #1df52f;
-    z-index: 0;
-    left: 50%;
+    text-align: center;
+    /* rotate value for stacking context inside the back of the clock */
+    transform: rotate(var(--rotation));
+    font-size: 50px;
+    color: rgb(120, 0, 255);
+    font-family: 'Merriweather', serif;
 }
 
-.clockBack .lines{
-    background-color: #bdbdcb;
-    width: 3px;
-}
 
-.clockBack .lines.lineOne{
-    transform: rotate(30deg);
-}
+/* positioning all the numbers */
+.clockBack .numbers1 {--rotation: 30deg}
+.clockBack .numbers2 {--rotation: 60deg}
+.clockBack .numbers3 {--rotation: 90deg}
+.clockBack .numbers4 {--rotation: 120deg}
+.clockBack .numbers5 {--rotation: 150deg}
+.clockBack .numbers6 {--rotation: 180deg}
+.clockBack .numbers7 {--rotation: 210deg}
+.clockBack .numbers8 {--rotation: 240deg}
+.clockBack .numbers9 {--rotation: 270deg}
+.clockBack .numbers10 {--rotation: 300deg}
+.clockBack .numbers11 {--rotation: 330deg}
+.clockBack .numbers12 {--rotation: 360deg}
 
-.clockBack .lines.lineTwo{
-    transform: rotate(60deg);
-}
-
-.clockBack .lines.lineThree{
-    transform: rotate(120deg);
-}
-
-.clockBack .lines.lineFour{
-    transform: rotate(150deg);
-}
 
 .clockFront{
     position: absolute;
@@ -82,6 +79,8 @@ section{
     z-index: 2;
 }
 
+
+/* clock middle (from where the needels start) */
 .clockFront::before{
     content: '';
     position: absolute;
@@ -100,7 +99,7 @@ section{
     width: 50%;
     right: 50%;
     height: 7px;
-    background-color: #ce007f;
+    background-color: rgb(250 176 3);
     position: absolute;
     top: 50%;
     border-radius: 6px;
@@ -110,19 +109,19 @@ section{
 }
 
 .needels.second{
-    background-color: #6fee1a;
-    width: 45%;
+    background-color: white;
+    width: 50%;
     height: 2px;
 }
 
 .needels.minute{
     height: 3px;
     z-index: 3;
-    width: 40%;
+    width: 45%;
 }
 
 .needels.hour{
-    width: 30%;
+    width: 40%;
     z-index: 3;
 }
 
@@ -145,7 +144,7 @@ section{
     box-shadow: -4px -4px 10px rgb(67 67 67 / 34%), 
                 inset 4px 4px 10px rgb(0 0 0 / 50%), 
                 inset -4px -4px 10px rgb(59 59 59 / 0%), 4px 4px 10px rgb(0 0 0 / 30%);
-    color: #ff00fa;
+    color: rgb(250 176 3);
 }
 
 #colorpicker{

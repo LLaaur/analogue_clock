@@ -33,7 +33,7 @@ const frameClr = document.getElementById('framepicker');
 
 if (clrPicker){
     clrPicker.addEventListener('input', () => {
-        $('.lines').css('background', clrPicker.value);
+        $('.number').css('color', clrPicker.value);
     });
 };
 
