@@ -28,7 +28,7 @@ const play = function(){
 };
 
 const clrPicker = document.getElementById('colorpicker');
-const bgClrPicker = document.getElementById('bgpicker');
+const ndlClrPicker = document.getElementById('ndlpicker');
 const frameClr = document.getElementById('framepicker');
 
 if (clrPicker){
@@ -37,9 +37,9 @@ if (clrPicker){
     });
 };
 
-if(bgClrPicker){
-    bgClrPicker.addEventListener('input', () => {
-        $('.clockBack, .clockFront').css('background', bgClrPicker.value)
+if(ndlClrPicker){
+    ndlClrPicker.addEventListener('input', () => {
+        $('.clockFront .needels').css('background', ndlClrPicker.value)
     });
 };
 
