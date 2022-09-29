@@ -12,5 +12,7 @@ III. how to get the local date and time of the user that accesses the web page;
 
 IV. how to add sound
 
+![analogue clock](https://user-images.githubusercontent.com/102544514/193110884-49936323-d845-4156-9293-94dae43b4636.png)
+
 
 👉 <a href="https://llaaur.github.io/analogue_clock/"> Live demo </a>
